@@ -1,0 +1,17 @@
+# Datos crudos y descargas
+data/
+*.zip
+
+# Salidas generadas
+salida/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
