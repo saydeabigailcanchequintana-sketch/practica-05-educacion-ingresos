@@ -69,6 +69,7 @@ else:
     print("La base limpia ya existe en salida/.")""")
 
 code("""base = pd.read_csv("salida/base_ocupados_limpia.csv", low_memory=False)
+base = base.copy()
 base["ln_ing_men"] = np.log(base["ing_lab_men"].clip(lower=1))
 base["ln_hrs"] = np.log(base["hrs_sem"].clip(lower=1))
 base["sexo_etq"] = base["sexo"].map({1: "Hombre", 2: "Mujer"})
