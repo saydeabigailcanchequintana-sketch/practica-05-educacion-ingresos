@@ -132,3 +132,5 @@ python limpieza.py
 python analisis_descriptivo.py
 python econometria.py
 ```
+
+**Nota para el notebook (`notebook/analisis.ipynb`):** selecciona el kernel **"Python 3.12 (ENIGH)"** en VS Code (botón de kernel en la esquina superior derecha) o en Jupyter. Ese kernel apunta al Python 3.12 con las dependencias instaladas; el notebook verifica los paquetes y muestra el intérprete activo en su segunda celda.

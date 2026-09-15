@@ -42,6 +42,21 @@ md("""## 2. Elección de la fuente: ENOE vs ENIGH
 
 md("""## 3. Descarga y limpieza de datos""")
 
+code("""import sys
+print("Python:", sys.executable)
+try:
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import statsmodels.api as sm
+except ModuleNotFoundError as e:
+    raise RuntimeError(
+        f"Falta el paquete {e.name}. Ejecuta 'pip install -r requirements.txt' "
+        "y verifica que el kernel del notebook sea 'Python 3.12 (ENIGH)'."
+    ) from e
+print("Paquetes OK: numpy", np.__version__, "| pandas", pd.__version__, "| statsmodels", sm.__version__)""")
+
 code("""import os
 if os.path.basename(os.getcwd()) == "notebook":
     os.chdir("..")
@@ -53,13 +68,7 @@ if not os.path.exists("salida/base_ocupados_limpia.csv"):
 else:
     print("La base limpia ya existe en salida/.")""")
 
-code("""import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import statsmodels.api as sm
-
-base = pd.read_csv("salida/base_ocupados_limpia.csv", low_memory=False)
+code("""base = pd.read_csv("salida/base_ocupados_limpia.csv", low_memory=False)
 base["ln_ing_men"] = np.log(base["ing_lab_men"].clip(lower=1))
 base["ln_hrs"] = np.log(base["hrs_sem"].clip(lower=1))
 base["sexo_etq"] = base["sexo"].map({1: "Hombre", 2: "Mujer"})
@@ -163,7 +172,7 @@ md("""## 6. Conclusiones
 
 nb["cells"] = cells
 nb["metadata"] = {
-    "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+    "kernelspec": {"display_name": "Python 3.12 (ENIGH)", "language": "python", "name": "enigh"},
     "language_info": {"name": "python", "version": "3.12"},
 }
 
