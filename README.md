@@ -88,7 +88,7 @@ Con 149,276 ocupados de 14 años o más (63.7 millones expandidos):
 - **Brecha de género:** las mujeres ganan 25.3% menos que los hombres controlando por educación, edad y horas (18.2% en salario por hora).
 - **Perfil de edad:** cóncavo, con ingreso máximo estimado alrededor de los 44 años.
 
-Detalles completos en [`informe.md`](informe.md) y en el notebook [`notebook/analisis.ipynb`](notebook/analisis.ipynb).
+Detalles completos en [`informe.md`](informe.md) y en el notebook [`notebook/analisis.ipynb`](notebook/analisis.ipynb). La descripción de todas las variables se encuentra en [`glosario.md`](glosario.md).
 
 ## Fases del proyecto
 
@@ -109,6 +109,7 @@ Detalles completos en [`informe.md`](informe.md) y en el notebook [`notebook/ana
 .
 ├── README.md                  ← este documento
 ├── informe.md                 ← informe final del proyecto
+├── glosario.md                ← glosario de variables y claves de ingreso
 ├── requirements.txt           ← dependencias de Python
 ├── descarga_datos.py          ← descarga y verifica los microdatos de INEGI
 ├── limpieza.py                ← limpieza y construcción de la base de análisis
