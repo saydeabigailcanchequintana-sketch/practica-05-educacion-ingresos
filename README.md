@@ -79,6 +79,30 @@ Muestra: 91,414 hogares y 308,598 personas; 149,276 personas ocupadas de 14 año
 
 ---
 
+## Resultados principales
+
+Con 149,276 ocupados de 14 años o más (63.7 millones expandidos):
+
+- **Educación e ingreso:** cada año adicional de escolaridad se asocia con ≈ **9.3%** más de ingreso laboral mensual (ecuación de Mincer, WLS ponderado por factor de expansión).
+- **Gradiente educativo:** ingreso mensual medio ponderado de $3,928 (sin instrucción) a $16,061 (profesional) y $29,841 (doctorado).
+- **Brecha de género:** las mujeres ganan 25.3% menos que los hombres controlando por educación, edad y horas (18.2% en salario por hora).
+- **Perfil de edad:** cóncavo, con ingreso máximo estimado alrededor de los 44 años.
+
+Detalles completos en [`informe.md`](informe.md) y en el notebook [`notebook/analisis.ipynb`](notebook/analisis.ipynb).
+
+## Fases del proyecto
+
+| Fase | Descripción | Archivo |
+|---|---|---|
+| 1–3 | Definición de la investigación, ENOE vs ENIGH y elección de la base | `README.md` |
+| 4 | Repositorio | este repositorio |
+| 5 | Configuración de Python | `requirements.txt` |
+| 6 | Descarga de datos | `descarga_datos.py` |
+| 7 | Exploración y limpieza | `limpieza.py` |
+| 8 | Análisis estadístico | `analisis_descriptivo.py` |
+| 9 | Econometría | `econometria.py` |
+| 10 | Documentación y presentación | `informe.md`, `notebook/analisis.ipynb` |
+
 ## Estructura del repositorio
 
 ```
